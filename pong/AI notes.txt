@@ -1,0 +1,19 @@
+Points to consider -
+1. There is an upper limit and a lower limit to which an AI Paddle is allowed to move.
+2. It reacts with some delay.
+3. When the ball is close sometimes it guess incorrectly and moves inversly.
+
+1
+- For giving a limit we can provide a while loop and a paddle Y value condition
+- We must know "how Y far the ball is" from paddle before we set any limit
+    Create a function that tells in number how far in integer the ball is.
+    (Recall Minus Y means up, plus Y means down)
+
+    0 is min | VIRTUAL_HEIGHT is the max | = limit for Y
+
+    VIRTUAL_HEIGHT / 2 - (ball_height / 2) is the center pos of ball
+
+    MAX FAR : if travel > (VIRTUAL_HEIGHT / 2)   i.e. any distance longer than half of the screen
+    NEAR : travel > ((VIRTUAL_HEIGHT / 2)/2)
+    VERY NEAR : if both above conditions are false, the travel distance is way too small
+
